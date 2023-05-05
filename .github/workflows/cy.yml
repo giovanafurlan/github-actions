@@ -1,0 +1,17 @@
+name: "CI (Integração conteínua): Primeira Action"
+
+on:
+  # Ativa esse fluxo de trabalho para cada push ou pull que acontecer apontando para a branch
+  pull_request:
+    types: [opened, synchronize]
+
+# Definindo o que queremos executar
+jobs:
+  exemplo: # Job exemplo
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run Linter
+        run: yarn linter
