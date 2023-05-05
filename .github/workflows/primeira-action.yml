@@ -2,10 +2,7 @@ name: "CI (Integração conteínua): Primeira Action"
 
 on:
   # Ativa esse fluxo de trabalho para cada push ou pull que acontecer apontando para a branch
-  push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
+  page_build
 
 # Definindo o que queremos executar
 jobs:
@@ -20,4 +17,3 @@ jobs:
 
       - name: Run a list files
         run: ls -la
-
